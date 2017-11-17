@@ -1,0 +1,169 @@
+.c-slider {
+	font-size: 14px;
+	color: black;
+	display: block;
+	img {
+		width: 100%;
+	}
+}
+
+.c-main {
+	height: 70vh;
+	position: relative;
+}
+
+.c-slider {
+	height: 100%;
+	white-space: nowrap;
+
+	.owl-wrapper-outer,
+	.owl-stage-outer,
+	.owl-stage,
+	.owl-wrapper {
+		height: 100%;
+	}
+	.owl-item {
+		height: 100%;
+	}
+	.h-inner {
+		text-align: center;
+	}
+	&__item {
+		display: inline-block;
+		width: 100%; height: 100%;
+		position: relative;
+		white-space: normal;
+	}
+	&__image {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+	.h-verticaly-middle {
+		position: relative;
+		z-index: 2;
+	}
+	&__title {
+		font-size: 26px;
+		text-transform: uppercase;
+		text-align: center;
+		padding-bottom: 10px;
+		color: #fff;
+		line-height: 1.1;
+		font-weight: 500;
+		&--actient {
+			color: $underline;
+		}
+	}
+	
+	&__text {
+		margin: 0px 0 40px;
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+	}
+
+	.owl-controls, .owl-nav {
+		height: 1px;
+		max-width: 1340px;
+		margin: 0 auto;
+	}
+	.owl-dots {
+		display: block;
+		text-align: center;
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		.owl-dot {
+			display: inline-block;
+			&.active {
+				span {
+					transform: scale(1.4);
+				}
+			}
+			span {
+				position: relative;
+				font-size: 12px;
+				display: block;
+				margin: 0 4px;
+				border-radius: 50%;
+				height: 10px;
+				width: 10px;
+				background: #fff;
+			}
+		}
+	}
+
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15px;
+		width: 50px; height: 50px;
+		display: inline-block;
+		background: transparent;
+		color: #ddd;
+		font-size: 0;
+		line-height: 50px;
+		text-align: center;
+		overflow: hidden;
+		transition: .3s;
+		cursor: pointer;
+
+		&:before {
+			content:'';
+			opacity: .2;
+			transition: .3s;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 40px;
+			width: 40px;
+			background: url('../img/chevron.svg') no-repeat;
+			background-size: 100%;
+			transform: translateY(-50%) translateX(-50%);
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+	.owl-prev {
+		right: auto;
+		left: 0;
+		&:before {
+			transform: translateY(-50%) translateX(-50%) rotate(180deg);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.c-slider {
+		.owl-nav {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.c-main {
+		height: 90vh;
+	}
+	.c-slider__title {
+		font-size: 20px;
+	}
+	.c-slider__text {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 420px) {
+	.c-main {
+		height: 100vh;
+	}
+}

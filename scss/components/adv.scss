@@ -1,0 +1,34 @@
+.c-adv {
+	padding: 0px 30px 20px;
+	figure {
+		padding-top: 60%;
+		position: relative;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
+}
+.c-adv__caption {
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: $beta;
+}
+
+
+@media (max-width: 768px) {
+	.c-adv {
+		max-width: 320px;
+		display: block;
+		margin: 0 auto;
+	}
+}

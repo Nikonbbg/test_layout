@@ -1,0 +1,37 @@
+.btn {
+	display: inline-block;
+	border: 2px solid #fff;
+	padding: 5px 60px;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	cursor: pointer;
+	text-transform: uppercase;
+	&:hover, &:focus {
+		background: $underline;
+		color: #fff;
+	}
+	&--primary {
+		color: #fff;
+		background: $underline;
+		&:hover {
+			background: black;
+		}
+	}
+}
+
+.btn-form {
+	border-radius: 0;
+	margin-left: 2px;
+	border: none;
+	cursor: pointer;
+	height: 30px;
+	line-height: 28px;
+	width: 30px;
+	background: #838383;
+	color: #fff;
+	transition: .3s;
+	&:hover {
+		 background: rgba(255,255,255, .6);
+	}
+}

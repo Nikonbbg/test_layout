@@ -1,0 +1,41 @@
+.c-tail {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	figure {
+		height: 70px;
+		position: relative;
+		white-space: nowrap;
+		&:before {
+			content:'';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+	.c-tail__image {
+		white-space: normal;
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.c-tail__link {
+	color: $underline;
+	font-family: $font2;
+	display: block;
+	text-align: center;
+	&:hover {
+		color: black;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.c-tail {
+		max-width: 320px;
+		display: block;
+		margin: 0 auto;
+	}
+}
